@@ -131,10 +131,38 @@ footer .content .info {
   margin: 0 2vw;
 }
 
+footer .content .info a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6vw;
+}
+
 footer .content .info img {
   width: 5vw;
+  height: 5vw;
+  transition: filter 0.5s;
+}
+
+footer .content .info .instagram{
+  width: 5.7vw;
+  height: 5.7vw;
+}
+
+footer .content .info .info_icon{
+   width: 4vw;
+   height: 4vw;
+}
+
+footer .content .info img:hover{
+  filter: brightness(0) saturate(100%) invert(75%) sepia(74%) saturate(1363%) hue-rotate(349deg) brightness(95%) contrast(84%);
 }
 
 footer .content .info p {
   margin-bottom: 2vh;
+}
+
+footer .content .icons{
+  display: flex;
+  align-items: center;
 }
