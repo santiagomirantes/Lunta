@@ -1,0 +1,98 @@
+main{
+    margin-top: 10vh;
+    padding-top: 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--darkblue);
+    min-height: 100vh;
+    color: #ffffff;
+    width: 100vw;
+}
+
+h1{
+    font-size: 3vw;
+}
+
+.purchase{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
+    background-color: var(--darkgrey);
+    margin:5vh 0;
+    padding: 0 2vw 5vh 2vw;
+}
+
+.purchase div{
+    width: 70vw;
+    margin-top: 5vh;
+}
+
+h2{
+    font-size: 2.5vw;
+    margin-bottom: 3vh;
+    color: var(--gold);
+}
+
+.purchase .details ul li{
+    font-size: 1.5vw;
+    list-style: none;
+    margin-top: 1vh;
+    margin-left:1vw;
+}
+
+.purchase .details ul span{
+    color: green;
+}
+
+.purchase .details ul #terrainID::before{
+    content:"#";
+}
+
+.purchase .details ul #terrainPrice::before{
+    content:"$";
+}
+
+.purchase form{
+    display: flex;
+    flex-direction: column;
+    margin-left:1vw;
+}
+
+.purchase form input{
+    width: 30vw;
+    margin-top: 5vh;
+    font-size: 1.5vw;
+    height: 7.5vh;
+    background-color: var(--black);
+    border: 2px solid white;
+    border-radius: 10px;
+    padding-left: 1vw;
+    color: white;
+}
+
+/* para cuando se autocomplete */
+input:is(:-webkit-autofill, :autofill){
+    -webkit-text-fill-color: white;
+    -webkit-box-shadow: 0 0 0px 40rem var(--black) inset;
+    cursor: text;
+    caret-color: white;
+}
+
+.purchase form #submit {
+    text-align: center;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s, border 0.5s, text-shadow 0.5s, box-shadow 0.5s;
+}
+
+.purchase form #submit:hover{
+    background-color: black;
+    color:var(--gold);
+    border: 2px solid var(--gold);
+    text-shadow: 0px 0px 5px var(--gold);
+    box-shadow:0px 0px 5px var(--gold);
+}

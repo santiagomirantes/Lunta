@@ -1,0 +1,124 @@
+main{
+    margin-top: 10vh;
+    padding-top: 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    color: #ffffff;
+    width: 100vw;
+    background-color: var(--darkblue);
+    padding-bottom: 30vh;
+    transition: height 0.5s;
+}
+
+h1{
+    font-size: 3vw;
+}
+
+.FAQ{
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--darkgrey);
+    margin-top: 5vh;
+    font-size: 2vw;
+}
+
+.FAQ .container{
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    padding: 5vh 2vw;
+    cursor: pointer;
+}
+
+.FAQ .container .title{
+    user-select: none;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 76vw;
+   margin-bottom: 2vh;
+}
+
+.FAQ .container .title h2{
+    font-size: 2.5vw;
+    transition: color 0.5s;
+}
+
+.FAQ .container:hover h2{
+    color: var(--gold);
+}
+
+.FAQ .container .title p{
+    width: 2vw;
+    font-size: 3vw;
+    text-align: right;
+    transform: rotate(90deg);
+    font-weight: bold;
+    transition: color 0.5s, text-shadow 0.5s, transform 0.5s;
+}
+
+.FAQ .container:hover .title p{
+    color: var(--gold);
+    text-shadow: 0px 0px 2px var(--gold);
+}
+
+.FAQ .container.show .title p{
+    transform: rotate(270deg);
+}
+
+.FAQ .container .info{
+    cursor: text;
+    height: 0vh;
+    width: 76vw;
+    overflow-y: hidden;
+    background-color: var(--black);
+    padding: 0;
+    color: var(--black);
+    transition: height 0.5s ease, padding 0.5s ease, color 0.5s ease;
+    transition-delay: 0s, 0s, 0s;
+}
+
+.FAQ .container.show .info{
+    height: 50vh;
+    color: white;
+    padding: 2vw 1vh;
+    transition-delay:0s, 0s, 0.5s;
+}
+
+.FAQ .container p:not(table p){
+    width: 70vw;
+}
+
+.FAQ .container .info table{
+    opacity: 0;
+    border-collapse: collapse;
+    margin-left: 5vw;
+    transition: opacity 0.5s ease;
+}
+
+.FAQ .container.show .info table{
+    transition-delay: 0.5s;
+     opacity: 1;
+}
+
+.FAQ .container .info table td{
+    border: 2px solid var(--gold);
+    width: 30vw;
+    text-align: center;
+    color: white;
+    height: 10vh;
+}
+
+.FAQ .container .info table td:nth-child(1) {
+    background-color: var(--gold);
+    color: var(--black);
+    width: 10vw;
+}
+
+.FAQ table a{
+    text-decoration: underline;
+}

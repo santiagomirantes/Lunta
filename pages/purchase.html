@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adquirir Terreno - Lunta</title>
+
+    <link rel="icon" href="../images/icon.ico" />
+
+    <!-- Estilos -->
+
+    <link rel="stylesheet" href="../styles/general.css" />
+    <link rel="stylesheet" href="../styles/purchase.css" />
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="/">
+        <img
+          src="../images/small_logo.png"
+          id="logo"
+          class="logo"
+          alt="Lunta Logo"
+          title="Logo de Lunta"
+        />
+      </a>
+      <nav>
+        <ul>
+          <li><a href="../index.html">inicio</a></li>
+          <li><a href="./terrains.html">terrenos</a></li>
+          <li><a href="./gallery.html">galería</a></li>
+          <li><a href="./about.html">acerca de</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>ADQUIRIR TERRENO</h1>
+
+      <section class="purchase">
+        <div class="details" id="details">
+          <h2>Detalles del terreno</h2>
+
+          <ul>
+            <li>ID del terreno: <span id="terrainID">XXXXXX</span></li>
+            <li>Precio: <span id="terrainPrice">000000</span></li>
+          </ul>
+        </div>
+
+        <div class="userInfo" id="userInfo">
+          <h2>Detalles del comprador</h2>
+
+          <form>
+            <input type="text" id="name" placeholder="Nombre completo">
+            <input type="email" id="email" placeholder="Email completo">
+            <input type="number" id="card_number" placeholder="Número de tarjeta">
+            <input type="text" id="card_expiration" placeholder="Fecha de vencimiento (DD/MM/AAAA)">
+            <input type="number" id="card_cvv" placeholder="CVV">
+            <input type="submit" id="submit">
+          </form>
+        </div>
+
+      </section>
+    </main>
+
+    <script src="../scripts/purchase.js"></script>
+  </body>
+</html>

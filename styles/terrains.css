@@ -1,0 +1,95 @@
+main{
+    margin-top: 10vh;
+    padding-top: 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--darkblue);
+    min-height: 100vh;
+    color: #ffffff;
+    width: 100vw;
+}
+h1{
+    font-size: 3vw;
+}
+
+.moon_rotating{
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.moon_rotating .moon_video_container{
+   position: relative;
+}
+
+.moon_rotating .moon_video_container .selection{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    width: 1vw;
+    height: 1.5vw;
+    background-color: rgba(255, 166, 0, 0.4);
+    border: 2px solid rgba(255, 166, 0, 0.7);
+}
+
+.moon_rotating .moon_video_container video{
+    width: 40vw;
+}
+
+.moon_rotating .terrain_info{
+    width: 40vw;
+    height: 50vh;
+}
+
+.moon_rotating .terrain_info  h2{
+    font-size: 2.5vw;
+    margin-bottom: 2vh;
+    color: var(--gold);
+    text-shadow: 0px 0px 5px var(--gold);
+}
+
+.moon_rotating .terrain_info  h2::before{
+   content:"#";
+}
+
+.moon_rotating .terrain_info li{
+    font-size: 1.5vw;
+    list-style:none;
+    margin-top: 1vh;
+}
+
+.moon_rotating .terrain_info p .avaliable{
+    color: green;
+}
+.moon_rotating .terrain_info p .unavaliable{
+    color: red;
+}
+
+.moon_rotating .terrain_info #meters{
+    color: var(--gold);
+}
+
+.moon_rotating .terrain_info #price{
+    color: green;
+}
+
+.moon_rotating .terrain_info #price::before{
+    content:"$";
+}
+
+.moon_rotating .terrain_info button{
+       margin-top: 5vh;
+       font-size: 1.5vw;
+}
+
+.moon_rotating .terrain_info #buy{
+    display: none;
+}
+
+.moon_rotating .terrain_info:has(.avaliable) #buy{
+   display: unset;
+}

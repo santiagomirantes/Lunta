@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terrenos - Lunta</title>
+
+    <link rel="icon" href="../images/icon.ico" />
+
+    <!-- Estilos -->
+
+    <link rel="stylesheet" href="../styles/general.css" />
+    <link rel="stylesheet" href="../styles/terrains.css" />
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <a href="/">
+        <img
+          src="../images/small_logo.png"
+          id="logo"
+          class="logo"
+          alt="Lunta Logo"
+          title="Logo de Lunta"
+        />
+      </a>
+      <nav>
+        <ul>
+          <li><a href="../index.html">inicio</a></li>
+          <li><a href="./terrains.html">terrenos</a></li>
+          <li><a href="./gallery.html">galería</a></li>
+          <li><a href="./about.html">acerca de</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>TERRENOS</h1>
+
+      <section class="moon_rotating">
+        <div class="moon_video_container">
+          <video id="moon_video" src="../videos/moon_rotating.mp4"></video>
+          <div class="selection" id="selection"></div>
+        </div>
+
+        <div id="terrain_info" class="terrain_info">
+          <h2>NOMBRE</h2>
+          <ul>
+            <li><p>Estado: <span id="status" class="avaliable">DISPONIBLE</span></p></li>
+            <li><p>Metros cuadrados: <span id="meters">0x0</span></p></li>
+            <li><p>Precio de compra: <span id="price">0</span></p></li>
+          </ul>
+          <button id="buy" onclick="redirect()">Comprar terreno</button>
+          <button id="skip">Ver otro terreno</button>
+        </div>
+      </section>
+    </main>
+
+
+    <footer>
+      <section class="content">
+        <div class="footer_menu">
+          <h4>CONTENIDOS</h4>
+          <ul>
+            <li><a href="../index.html">inicio</a></li>
+            <li><a href="./terrains.html">terrenos</a></li>
+            <li><a href="./gallery.html">galería</a></li>
+            <li><a href="./about.html">acerca de</a></li>
+          </ul>
+        </div>
+
+        <div class="info">
+
+          <img src="../images/github.png" alt="github logo">
+
+          <p>© 2025 Santiago Mirantes. Todos los derechos reservados.</p>
+
+        </div>
+      </section>
+    </footer>
+
+    <script src="../scripts/terrains.js"></script>
+  </body>
+</html>

@@ -1,0 +1,140 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+:root {
+  --black: rgb(8, 8, 8);
+  --darkgrey: rgb(17,17,17);
+  --gold: rgb(224, 168, 31);
+  --darkblue: rgb(0,2,20);
+}
+
+html {
+  width: 100%;
+  height: auto;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  height: auto;
+}
+
+@font-face {
+  font-family: "Winky_Sans";
+  src: url("../fonts/Winky_Sans/winky_sans_reg.ttf");
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato/Lato-Regular.ttf");
+}
+
+header {
+  display: flex;
+  background-color: black;
+  align-items: center;
+  height: 10vh;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.logo {
+  width: 3vw;
+  height: 7.5vh;
+  clip-path: inset(0% 28% 0% 0%);
+}
+nav {
+  width: 80vw;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+}
+nav ul li {
+  margin: 0 1vw;
+}
+a {
+  color: white;
+  text-decoration: none;
+  transition: text-shadow 0.5s, color 0.5s;
+}
+a:hover {
+  color: var(--gold);
+  text-shadow: 0px 0px 5px var(--gold);
+}
+
+a:has(.logo) {
+  transition: filter 0.5s;
+}
+
+a:has(.logo):hover {
+  filter: drop-shadow(0px 0px 5px white);
+}
+
+button{
+  color: black;
+  background-color: white;
+  font-size: 2vw;
+  padding: 2vh 5vw;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.5s, box-shadow 0.5s, color 0.5s, text-shadow 0.5s;
+  border: none;
+}
+
+button:hover{
+   background-color: var(--gold);
+   color: white;
+   text-shadow: 0px 0px 2px white;
+   box-shadow: 0px 0px 5px var(--gold);
+}
+
+footer {
+  width: 100vw;
+  height: 30vh;
+  color: white;
+  background-color: var(--black);
+}
+
+footer .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .content .footer_menu {
+  margin: 2vh 2vw;
+}
+
+footer .content .footer_menu li {
+  list-style: none;
+  margin: 1vh 0;
+}
+
+footer .content .footer_menu a {
+  text-decoration: underline;
+}
+
+footer .content .info {
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: 0 2vw;
+}
+
+footer .content .info img {
+  width: 5vw;
+}
+
+footer .content .info p {
+  margin-bottom: 2vh;
+}
