@@ -15,6 +15,7 @@
 html {
   width: 100%;
   height: auto;
+  overflow-x: hidden;
 }
 
 body {
@@ -42,7 +43,7 @@ header {
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 5;
 }
 .logo {
   width: 3vw;
@@ -52,6 +53,7 @@ header {
 nav {
   width: 80vw;
 }
+
 nav ul {
   display: flex;
   list-style: none;
@@ -77,7 +79,24 @@ a:has(.logo):hover {
   filter: drop-shadow(0px 0px 5px white);
 }
 
-button{
+#openMenu{
+  background-color: transparent;
+  text-align: center;
+  border: none;
+  font-size: 4vw;
+  height:auto;
+  padding: 0;
+  width:15vw;
+  color: white;
+  cursor: pointer;
+}
+
+.hidden{
+  display: none;
+}
+
+
+button:not(#openMenu){
   color: black;
   background-color: white;
   font-size: 2vw;
@@ -89,7 +108,7 @@ button{
   border: none;
 }
 
-button:hover{
+button:not(#openMenu):hover{
    background-color: var(--gold);
    color: white;
    text-shadow: 0px 0px 2px white;
@@ -131,27 +150,36 @@ footer .content .info {
   margin: 0 2vw;
 }
 
+footer .content .info .footer_logo{
+   background-image:url(../multimedia/images/logo.png);
+   width: 15vw;
+   height: 4vw;
+   background-size: cover;
+   background-position:1.5vw;
+   background-repeat: no-repeat;
+}
+
 footer .content .info a{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 6vw;
+  width: 4vw;
 }
 
 footer .content .info img {
-  width: 5vw;
-  height: 5vw;
+  width: 3vw;
+  height: 3vw;
   transition: filter 0.5s;
 }
 
 footer .content .info .instagram{
-  width: 5.7vw;
-  height: 5.7vw;
+  width: 3.7vw;
+  height: 3.7vw;
 }
 
 footer .content .info .info_icon{
-   width: 4vw;
-   height: 4vw;
+   width: 2.5vw;
+   height: 2.5vw;
 }
 
 footer .content .info img:hover{
@@ -165,4 +193,124 @@ footer .content .info p {
 footer .content .icons{
   display: flex;
   align-items: center;
+}
+
+/*Media-Queries*/
+
+@media(max-width:720px) {
+
+  body:has(nav.show){
+    height: 100vh;
+    overflow-y: hidden;
+  }
+   header{
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 10vh;
+  }
+
+  header.opened{
+    height: 100vh;
+    align-items: center;
+  }
+
+  .logo{
+    width: 12.5vw;
+    height: 10vh;
+    object-fit: contain;
+  }
+   #openMenu{
+    display: inline-block;
+    font-size: 15vw;
+    display: flex;
+    height: 10vh;
+   }
+
+   nav{
+    display: none;
+   }
+
+   nav.show{
+    display: unset;
+   }
+
+   nav ul{
+    width: 100vw;
+    height: 90vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20vh;
+   }
+
+   nav ul li{
+    font-size: 10vw;
+   }
+
+   nav ul li:not(nav ul li:nth-child(1)){
+    margin-top: 5vh;
+   }
+
+   footer{
+    height: auto;
+   }
+
+   footer .content{
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: space-between;
+   }
+
+   footer .content .footer_menu{
+    margin: 2vh 2vw;
+    font-size: 5vw;
+   }
+
+   footer .content .info {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  footer .content .info .footer_logo{
+    width: 50vw;
+    height: 10vh;
+    background-position:-5vw;
+ }
+ 
+ footer .content .info a{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 20vw;
+ }
+ 
+ footer .content .info img {
+   width: 13.5vw;
+   height: 13.5vw;
+   transition: filter 0.5s;
+ }
+ 
+ footer .content .info .instagram{
+   width: 17.5vw;
+   height: 17.5vw;
+ }
+ 
+ footer .content .info .info_icon{
+    width: 12.5vw;
+    height: 12.5vw;
+ }
+ 
+ footer .content .info p {
+   font-size: 5vw;
+ }
+ 
+ footer .content .icons{
+   justify-content: space-around;
+   margin-bottom: 5vh;
+   width: 100vw;
+ }
+
 }

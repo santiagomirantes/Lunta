@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Acerca De - Lunta</title>
 
-    <link rel="icon" href="../images/icon.ico" />
+    <link rel="icon" href="../multimedia/images/icon.ico" />
 
     <!-- Estilos -->
 
@@ -25,13 +25,16 @@
     <header>
       <a href="/">
         <img
-          src="../images/small_logo.png"
+          src="../multimedia/images/small_logo.png"
           id="logo"
           class="logo"
           alt="Lunta Logo"
           title="Logo de Lunta"
         />
       </a>
+
+      <button id="openMenu" class="hidden">=</button>
+
       <nav>
         <ul>
           <li><a href="../index.html">inicio</a></li>
@@ -121,13 +124,40 @@
         </div>
 
         <div class="info">
-          <img src="../images/github.png" alt="github logo" />
 
+
+          <!-- In a div to crop the borders -->
+          <div class="footer_logo"> </div>
+
+          <div class="icons">
+            <a href="https://github.com/santiagomirantes/Lunta" target="_blank">
+              <img src="../multimedia/images/github.png" alt="github logo" />
+            </a>
+
+            <a href="https://instagram.com/santi.mirantes" target="_blank">
+              <img
+                src="../multimedia/images/instagram.png"
+                class="instagram"
+                alt="instagram logo"
+              />
+            </a>
+
+            <a href="mailto:santivmirantes@gmail.com" target="_blank">
+              <img src="../multimedia/images/email.png" class="email" alt="email logo" />
+            </a>
+
+            <a href="../multimedia/PDFs/info.pdf" target="_blank">
+              <img src="../multimedia/images/info.png" class="info_icon" alt="info icon" />
+            </a>
+          </div>
+
+          <p>Instituto Nuestra Señora de Fátima</p>
           <p>© 2025 Santiago Mirantes. Todos los derechos reservados.</p>
         </div>
       </section>
     </footer>
 
     <script src="../scripts/about.js"></script>
+    <script src="../scripts/general.js"></script>
   </body>
 </html>
