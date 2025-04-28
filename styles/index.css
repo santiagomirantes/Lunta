@@ -127,3 +127,15 @@ body {
   top: 65%;
   left: 50%;
 }
+
+@media (max-width:720px) {
+  .banner{
+    height: 100vh;
+  }
+    .banner img{
+      transform: rotate(270deg);
+      width: 100vh;
+      height: 100vw;
+      background-color: orange;
+    }
+}
