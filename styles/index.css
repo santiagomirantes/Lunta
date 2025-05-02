@@ -16,6 +16,7 @@ body {
 
 .banner {
   background-color: black;
+  margin-top: 10vh;
   display: inline-block;
 }
 
@@ -29,7 +30,8 @@ body {
   );
   filter: brightness(50%);
   height: 90vh;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: bottom;
 }
 
 .banner h1 {
@@ -50,6 +52,9 @@ body {
   transform: translate(-50%, -50%);
   top: 60%;
   left: 50%;
+  text-align: center;
+  font-size: var(--text-size);
+  width: 100vw;
 }
 
 .row {
@@ -75,18 +80,17 @@ body {
 
 .row .text {
   height: 40vh;
-  padding: 0vh 1vw;
   color: white;
   width: 70vw;
   padding: 0 5vw;
 }
 
 .row .text h2 {
-  font-size: 3vw;
+  font-size: var(--title-size);
 }
 
 .row .text p {
-  font-size: 2vw;
+  font-size: var(--text-size);
   margin: 2vh 0 5vh 0;
 }
 
@@ -110,7 +114,7 @@ body {
 }
 
 #start h2 {
-  font-size: 3vw;
+  font-size: var(--title-size);
   z-index: 2;
   position: absolute;
   transform: translate(-50%, -50%);
@@ -128,14 +132,61 @@ body {
   left: 50%;
 }
 
-@media (max-width:720px) {
-  .banner{
-    height: 100vh;
+@media (max-width: 720px) {
+  .banner {
+    height: 90vh;
+    margin-top: 20vh;
   }
-    .banner img{
-      transform: rotate(270deg);
-      width: 100vh;
-      height: 100vw;
-      background-color: orange;
-    }
+  .banner img {
+    transform: rotate(90deg);
+    width: 90vh; /*transform rotate switches height and width*/
+    height: 100vw;
+    mask-image: radial-gradient(
+      ellipse 60% 100% at center,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.1) 60%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+  .banner h1 {
+    font-size: 25vw;
+    top: 50%;
+  }
+
+  .banner h2 {
+    padding: 5vw;
+    top: 65%;
+  }
+
+  .row {
+    flex-direction: column;
+    min-height: 100vh;
+    height: auto;
+  }
+
+  .row .image {
+    width: auto;
+  }
+
+  .row .image img {
+    width: 80vw;
+  }
+
+  .row .text {
+    margin-top: 5vh;
+    height: auto;
+    width: 100vw;
+    padding: 5vh 5vw;
+  }
+
+  .row .text h2 {
+    font-size: var(--title-size);
+  }
+
+  #start h2 {
+    font-size: var(--title-size);
+    padding: 5vw;
+    width: 100vw;
+    text-align: center;
+  }
 }

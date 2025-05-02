@@ -10,6 +10,8 @@
   --darkgrey: rgb(17,17,17);
   --gold: rgb(224, 168, 31);
   --darkblue: rgb(0,2,20);
+  --title-size:3vw;
+  --text-size:2vw;
 }
 
 html {
@@ -99,7 +101,7 @@ a:has(.logo):hover {
 button:not(#openMenu){
   color: black;
   background-color: white;
-  font-size: 2vw;
+  font-size: var(--text-size);
   padding: 2vh 5vw;
   border-radius: 30px;
   font-weight: bold;
@@ -199,6 +201,11 @@ footer .content .icons{
 
 @media(max-width:720px) {
 
+  :root {
+    --title-size:9vw;
+    --text-size:6vw;
+  }
+
   body:has(nav.show){
     height: 100vh;
     overflow-y: hidden;
@@ -224,6 +231,7 @@ footer .content .icons{
     font-size: 15vw;
     display: flex;
     height: 10vh;
+    align-items: center;
    }
 
    nav{
@@ -244,12 +252,17 @@ footer .content .icons{
    }
 
    nav ul li{
-    font-size: 10vw;
+    font-size: var(--title-size);
    }
 
    nav ul li:not(nav ul li:nth-child(1)){
     margin-top: 5vh;
    }
+
+   button:not(#openMenu){
+    padding: 3vh 7vw;
+    min-width: 70vw;
+  }
 
    footer{
     height: auto;

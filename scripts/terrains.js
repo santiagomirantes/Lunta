@@ -62,8 +62,17 @@ function updateTerrainInfo(pos) {
 
     priceElement.innerHTML = terrain.price
 
-   selectionElement.style.width = terrain.selection[0] / 5 + "vw"
-   selectionElement.style.height = terrain.selection[1] / 5 + "vw"
+    let selectionWidth = terrain.selection[0]
+    let selectionHeight = terrain.selection[1]
+
+    //if it´s not mobile
+    if(window.innerWidth > 720) {
+      selectionWidth = selectionWidth / 5
+      selectionHeight = selectionHeight / 5
+    }
+
+   selectionElement.style.width = selectionWidth + "vw"
+   selectionElement.style.height = selectionHeight + "vw"
 
    terrainInfo.style.visibility = "unset"
    selectionElement.style.display = "unset"
@@ -112,7 +121,7 @@ moonVideo.onended = () => {
 
 function redirect() {
     const terrain = terrains[current]
-    return window.location.href = `/pages/purchase.html?name=${terrain.name}&price=${terrain.intPrice}`
+    return window.location.href = `./purchase.html?name=${terrain.name}&price=${terrain.intPrice}`
 }
 
 updateTerrainInfo(0)
